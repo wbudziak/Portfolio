@@ -64,36 +64,43 @@ const ContactForm = (props) => {
   const formSubmissionHandler = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("", "", form.current, "").then(
-      (result) => {
-        resetNameInput();
-        resetEmailInput();
-        resetPhoneInput();
+    emailjs
+      .sendForm(
+        "",
+        "",
+        form.current,
+        ""
+      )
+      .then(
+        (result) => {
+          resetNameInput();
+          resetEmailInput();
+          resetPhoneInput();
 
-        setIsSend(true);
+          setIsSend(true);
 
-        setTimeout(() => {
-          setIsSend(false);
-        }, 10000);
-      },
-      (error) => {
-        setIsError(true);
+          setTimeout(() => {
+            setIsSend(false);
+          }, 10000);
+        },
+        (error) => {
+          setIsError(true);
 
-        setTimeout(() => {
-          setIsError(false);
-        }, 10000);
-      }
-    );
+          setTimeout(() => {
+            setIsError(false);
+          }, 10000);
+        }
+      );
   };
 
   return (
     <S.CenterForm>
       <S.Form
-        as={motion.div}
-        initial={{ opacity: 0, y: -15 }}
+        as={motion.form}
+        initial={{ y: -15, opacity: 0 }}
         animate={{
-          opacity: 1,
           y: 0,
+          opacity: 1,
         }}
         transition={{
           duration: 0.3,
