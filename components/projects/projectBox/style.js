@@ -1,22 +1,26 @@
 import styled from "styled-components";
 import { colors } from "../../variables/colors";
 import { below } from "../../mixins/breakpoints";
+import { motion } from "framer-motion";
 
 export const Box = styled.a`
+  cursor: pointer;
   display: block;
   grid-column: span 1;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.4);
+
   &:hover {
     .imageContainer {
       position: relative;
-      svg {
+      .icon {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
       }
       &::before {
         background: #3ec3fc;
-        opacity: 0.6;
+        opacity: 0.85;
       }
     }
     .secondLayer {
@@ -31,15 +35,6 @@ export const ImageContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-
-  svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.95);
-    opacity: 0;
-    transition: 0.3s linear;
-  }
 
   &::before {
     content: "";
@@ -58,6 +53,18 @@ export const Img = styled.img`
   width: 100%;
   height: 190px;
   object-fit: cover;
+`;
+
+export const Icon = styled.img`
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  opacity: 0;
+  transition: 0.3s linear;
 `;
 
 export const Content = styled.div`

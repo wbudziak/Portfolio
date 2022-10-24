@@ -4,6 +4,7 @@ import * as S from "./style";
 import { useRouter } from "next/router";
 import pl from "../../../locales/pl";
 import en from "../../../locales/en";
+import { motion } from "framer-motion";
 
 const Listing = (props) => {
   const { projects } = props;
@@ -39,7 +40,7 @@ const Listing = (props) => {
         (index === 0 && selectedTag === pl.projects.listing.btn && "active") ||
         (index === 0 && selectedTag === en.projects.listing.btn && "active")
       }
-      key={tag}
+      key={(tag, index)}
       onClick={filterByTags}
     >
       {tag}
@@ -48,9 +49,10 @@ const Listing = (props) => {
 
   const filterSelected = filteredList
     .filter((project) => project.technology.includes(selectedTag))
-    .map((project) => (
+    .map((project, index) => (
       <ProjectBox
-        key={project.link}
+        key={(project.link, index)}
+        index={index}
         href={project.link}
         img={project.img}
         name={project.name}
@@ -59,9 +61,10 @@ const Listing = (props) => {
       ></ProjectBox>
     ));
 
-  const filterAll = filteredList.map((project) => (
+  const filterAll = filteredList.map((project, index) => (
     <ProjectBox
-      key={project.link}
+      key={(project.link, index)}
+      index={index}
       href={project.link}
       img={project.img}
       name={project.name}

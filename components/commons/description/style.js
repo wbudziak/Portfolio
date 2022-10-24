@@ -54,6 +54,12 @@ export const TextContent = styled.div`
         margin-right: 12px;
         color: ${colors.lightgray};
       }
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 `;
@@ -63,6 +69,7 @@ export const BtnContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 24px;
 `;
 

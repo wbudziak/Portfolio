@@ -20,6 +20,8 @@ export const BtnWrapper = styled.div`
 export const Btn = styled.div`
   padding: 6px 16px;
   background-color: #202020;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.4);
+
   cursor: pointer;
   font-size: 18px;
   line-height: 28px;

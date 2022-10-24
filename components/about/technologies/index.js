@@ -1,5 +1,6 @@
 import * as S from "./style";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Technologies = (props) => {
   const {
@@ -13,8 +14,20 @@ const Technologies = (props) => {
     <>
       <S.Heading>{mainTechnologyHeading}</S.Heading>
       <S.List>
-        {mainTechnologyList.map((technology) => (
-          <S.ListItem key={technology.name}>
+        {mainTechnologyList.map((technology, index) => (
+          <S.ListItem
+            as={motion.li}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.3,
+              delay: 0.3 + index * 0.05,
+              type: "linear",
+            }}
+            key={(technology.name, index)}
+          >
             <Image src={technology.img} alt="html" width={24} height={24} />
             <span> {technology.name}</span>
           </S.ListItem>
@@ -22,8 +35,20 @@ const Technologies = (props) => {
       </S.List>
       <S.Heading>{otherTechnologyHeading}</S.Heading>
       <S.SecondList>
-        {otherTechnologyList.map((technology) => (
-          <S.SecondListItem key={technology}>
+        {otherTechnologyList.map((technology, index) => (
+          <S.SecondListItem
+            as={motion.li}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.3,
+              delay: 0.3 + index * 0.05,
+              type: "linear",
+            }}
+            key={(technology, index)}
+          >
             <span>{technology}</span>
           </S.SecondListItem>
         ))}

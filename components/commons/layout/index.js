@@ -50,9 +50,9 @@ export const LayoutWrapper = (props) => {
         {props.children}
         <S.PaginationContainer>
           {t.commons.navigation.map(
-            (link) =>
+            (link, index) =>
               !link.downloadPath && (
-                <Link href={link.path} key={link.path}>
+                <Link href={link.path} key={(link.path, index)}>
                   <S.PaginationItem
                     current={router.pathname === link.path ? true : false}
                   />
@@ -71,24 +71,14 @@ export const LayoutDescription = (props) => {
 
   return (
     <>
-      <S.Description
-        as={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-        }}
-        transition={{
-          duration: 0.3,
-          type: "linear",
-        }}
-      >
-        {props.children}
-      </S.Description>
+      <S.Description>{props.children}</S.Description>
     </>
   );
 };
 
 export const LayoutContent = (props) => {
+  const { noMobilePadding } = props;
+
   const switchPage = useSwitchPage();
   const switchPageUpdate = useSwitchPageUpdate();
 
@@ -108,6 +98,7 @@ export const LayoutContent = (props) => {
             type: "linear",
           }}
           ref={heightRef}
+          className={noMobilePadding && "noMobilePadding"}
         >
           {props.children}
         </S.ContentWrapper>

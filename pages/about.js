@@ -28,8 +28,7 @@ export default function About() {
             <Description
               heading={t.about.description.heading}
               description={t.about.description.description}
-              btnText={t.about.description.btnText}
-              btnLink="/projects"
+              btns={t.about.description.btns}
             />
           </LayoutDescription>
 

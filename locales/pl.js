@@ -28,8 +28,8 @@ const pl = {
       },
     ],
     contactForm: {
-      name: "Imię i nazwisko",
-      email: "Adres Email",
+      name: "Imię",
+      email: "Email",
       message: "Wiadomość",
       submit: "Wyślij wiadomość",
       fieldRequired: "Pole wymagane.",
@@ -45,30 +45,44 @@ const pl = {
     seo: {
       title: "Wojciech Budziak | Frontend Developer",
       description:
-        "Cześć! Nazywam się Wojciech Budziak i to jest moje portfolio. Znajdziesz tutaj trochę informacji o mnie i moich projektach.",
+        "Bardzo miło mi Cię tutaj gościć! Strona na której się znajdujesz, jest moim portfolio. Dowiesz się tutaj trochę informacji o mnie i moich projektach.",
       keywords:
-        "wojciech budziak, wojciech, budziak, react, programowanie, strony internetowe, tworzenie stron internetowych, html, css , JavaScript, js, frontend developer, web developer , strony internetowe wschowa, strony internetowe wrocław, next.js, typesccript, sass ,wordpress, strony internetowe od podstaw, junior frontend developer",
+        "wojciech budziak, wojciech, budziak, react, programowanie, strony internetowe, tworzenie stron internetowych, html, css , JavaScript, js, frontend developer, web developer , strony internetowe wschowa, strony internetowe wrocław, next.js, typescript, sass ,wordpress, strony internetowe od podstaw, junior frontend developer",
     },
     description: {
       heading: "Cześć,</br>jestem <strong> Wojtek</strong>",
       description:
         "<p>Bardzo miło mi Cię tutaj gościć! Strona na której się znajdujesz, jest moim portfolio. Dowiesz się tutaj trochę informacji o mnie i moich projektach.</p>",
-      btnText: "Poznaj mnie",
+      btns: [
+        {
+          text: "Poznaj mnie",
+          href: "/about",
+        },
+        {
+          text: "Kontakt",
+          href: "/contact",
+        },
+      ],
     },
   },
   about: {
     seo: {
       title: "Wojciech Budziak | O mnie",
       description:
-        "Cześć! Nazywam się Wojciech Budziak i to jest moje portfolio. Znajdziesz tutaj trochę informacji o mnie i moich projektach.",
+        "Nazywam się Wojciech Budziak, jestem 22 letnim Frontend Developerem mieszkającym i pracującym we Wschowie. Od ponad dwóch lat zajmuje się tworzeniem stron internetowych, a od 1.5 roku pracuje komercyjnie. W najbliższych planach, chciałbym przeprowadzić się do Wrocławia i znaleźć nową pracę, która pozwoliłaby mi się dalej rozwijać.",
       keywords:
         "wojciech budziak, wojciech, budziak, react, programowanie, strony internetowe, tworzenie stron internetowych, html, css , JavaScript, js, frontend developer, web developer , strony internetowe wschowa, strony internetowe wrocław, next.js, typesccript, sass ,wordpress, strony internetowe od podstaw, junior frontend developer",
     },
     description: {
       heading: "O <strong>mnie</strong>",
       description:
-        "<p>Nazywam się Wojciech Budziak, jestem 22 letnim Frontend Developerem mieszkającym i pracującym we Wschowie. Od ponad dwóch lat zajmuje się tworzeniem stron internetowych, a od 1.5 roku pracuje komercyjnie. W najbizszych planach, chciałbym przeprowadzić się do Wrocławia i znaleźć nową pracę, która pozwoliłaby mi się dalej rozwijać.",
-      btnText: "Zobacz moje projekty",
+        "<p>Nazywam się Wojciech Budziak, jestem 22 letnim Frontend Developerem mieszkającym i pracującym we Wschowie. Od ponad dwóch lat zajmuje się tworzeniem stron internetowych, a od 1.5 roku pracuje komercyjnie. W najbliższych planach, chciałbym przeprowadzić się do Wrocławia i znaleźć nową pracę, która pozwoliłaby mi się dalej rozwijać.",
+      btns: [
+        {
+          text: "Zobacz moje projekty",
+          href: "/projects",
+        },
+      ],
     },
     mainTechnologies: {
       heading: "Główne technologie",
@@ -152,7 +166,7 @@ const pl = {
     seo: {
       title: "Wojciech Budziak | Projekty",
       description:
-        "Cześć! Nazywam się Wojciech Budziak i to jest moje portfolio. Znajdziesz tutaj trochę informacji o mnie i moich projektach.",
+        "Parę moich hobbystycznych projektów zrobionych w wolnym czasie",
       keywords:
         "wojciech budziak, wojciech, budziak, react, programowanie, strony internetowe, tworzenie stron internetowych, html, css , JavaScript, js, frontend developer, web developer , strony internetowe wschowa, strony internetowe wrocław, next.js, typesccript, sass ,wordpress, strony internetowe od podstaw, junior frontend developer",
     },
@@ -160,11 +174,16 @@ const pl = {
       heading: "Moje <strong>projekty</strong>",
       description:
         "<p>Parę moich hobbystycznych projektów zrobionych w wolnym czasie</p>",
-      btnText: "Skontaktuj się ze mną",
+      btns: [
+        {
+          text: "Skontaktuj się ze mną",
+          href: "/contact",
+        },
+      ],
     },
     projects: [
       {
-        link: "https://github.com/wbudziak/reactportfolio",
+        link: "https://github.com/wbudziak/Portfolio",
         img: "/images/react-portfolio.png",
         name: "Strona Portfolio",
         description: "zrobiona w React i Next.js",
@@ -178,7 +197,7 @@ const pl = {
         technology: ["HTML", "CSS", "JavaScript"],
       },
       {
-        link: "https://github.com/wbudziak/react-calculator/tree/gh-pages",
+        link: "https://github.com/wbudziak/react-calculator/tree/master",
         img: "/images/calculator.png",
         name: "Kalkulator",
         description: "Mój pierwszy projekt zrobiony w React",
@@ -255,8 +274,7 @@ const pl = {
   contact: {
     seo: {
       title: "Wojciech Budziak | Kontakt",
-      description:
-        "Cześć! Nazywam się Wojciech Budziak i to jest moje portfolio. Znajdziesz tutaj trochę informacji o mnie i moich projektach.",
+      description: "Poznajmy się! Znajdziesz tutaj różne formy kontaktu.",
       keywords:
         "wojciech budziak, wojciech, budziak, react, programowanie, strony internetowe, tworzenie stron internetowych, html, css , JavaScript, js, frontend developer, web developer , strony internetowe wschowa, strony internetowe wrocław, next.js, typesccript, sass ,wordpress, strony internetowe od podstaw, junior frontend developer",
     },
@@ -265,8 +283,12 @@ const pl = {
       description:
         "<ul><li><img src='/icons/envelope.svg'/><a href='mailto:w.a.budziak@gmail.com'>w.a.budziak@gmail.com</a></li><li><img src='/icons/linkedin.svg'/><a target='_blank' href='https://www.linkedin.com/in/wojciech-budziak-6854301bb/'>wojciech budziak</a></li><li><img src='/icons/github.svg'/><a target='_blank' href='https://github.com/wbudziak/'>w.budziak</a></li><ul><p>Zachęcam Cię równiez do kontaktu poprzez formularz. Twoje dane kontaktowe są bezpieczne i nie będą przekazywane osobom trzecim.</p>",
 
-      btnText: "Pobierz moje CV",
-      downloadPath: "/download/cv-pl.pdf",
+      btns: [
+        {
+          text: "Pobierz moje CV",
+          downloadPath: "/download/cv-pl.pdf",
+        },
+      ],
     },
   },
 };

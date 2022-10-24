@@ -36,7 +36,7 @@ const Header = () => {
   };
 
   const navItems = t.commons.navigation.map((link, index) => (
-    <S.NavItem key={link.name}>
+    <S.NavItem key={(link.name, index)}>
       <S.NavItemWrapper
         as={motion.div}
         initial={{ x: "-150%", opacity: 0 }}
@@ -73,6 +73,16 @@ const Header = () => {
       {router.locale !== locale && (
         <Link href={router.asPath} locale={locale}>
           <S.Language>{locale}</S.Language>
+        </Link>
+      )}
+    </li>
+  ));
+
+  const languagesMobile = router.locales.map((locale) => (
+    <li key={locale}>
+      {router.locale !== locale && (
+        <Link href={router.asPath} locale={locale}>
+          <S.LanguageMobile>{locale}</S.LanguageMobile>
         </Link>
       )}
     </li>
@@ -128,6 +138,7 @@ const Header = () => {
           transition={{ duration: 0.3, type: "linear" }}
         >
           {navItems}
+          <ul>{languagesMobile}</ul>
         </S.Nav>
       </S.Header>
     </>

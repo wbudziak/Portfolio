@@ -100,6 +100,7 @@ export const Description = styled.div`
       width: 150vw;
       height: 100%;
       background-color: ${colors.black};
+      z-index: -1;
     }
   }
 `;
@@ -112,6 +113,8 @@ export const Content = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   background-color: ${colors.dark};
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.4);
+
   max-height: 100vh;
   overflow-y: auto;
   position: relative;
@@ -130,12 +133,13 @@ export const Content = styled.div`
   }
 
   @media ${below.lg} {
-    /* padding-top: 48px; */
-    /* margin-top: 48px; */
     grid-column: unset;
     padding: 0;
     padding: 0 24px;
     max-height: unset;
+    box-shadow: none;
+    flex: 1;
+    height: calc(100%);
   }
 `;
 
@@ -145,9 +149,13 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   @media ${below.lg} {
-    height: auto;
     padding: 0;
-    padding: 48px 0 00px;
+    padding: 48px 0 0px;
+  }
+  &.noMobilePadding {
+    @media ${below.lg} {
+      padding-top: 0;
+    }
   }
 `;
 

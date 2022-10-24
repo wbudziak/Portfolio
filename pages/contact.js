@@ -1,5 +1,5 @@
 import useLayout from "../hooks/use-layout";
-import ContactForm from "../components/commons/ContactForm";
+import ContactForm from "../components/contact/ContactForm";
 import useTranslate from "../hooks/use-translate";
 
 export default function Contact() {
@@ -29,7 +29,7 @@ export default function Contact() {
               description={t.contact.description.description}
               btnText={t.contact.description.btnText}
               list={t.contact.description.list}
-              downloadPath={t.contact.description.downloadPath}
+              btns={t.contact.description.btns}
             />
           </LayoutDescription>
           <LayoutContent>

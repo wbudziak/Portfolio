@@ -1,10 +1,23 @@
 import * as S from "./style";
+import { motion } from "framer-motion";
 
 const Experience = (props) => {
   const { experience, heading } = props;
 
   const mapListItems = experience.map((experience, index) => (
-    <S.ListItem key={experience}>
+    <S.ListItem
+      as={motion.li}
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.3,
+        delay: 0.8 + index * 0.1,
+        type: "linear",
+      }}
+      key={(experience, index)}
+    >
       <S.Info>
         <S.Years>{experience.years}</S.Years>
         <S.City>{experience.city}</S.City>

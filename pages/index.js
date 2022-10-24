@@ -28,11 +28,11 @@ export default function Home() {
             <Description
               heading={t.main.description.heading}
               description={t.main.description.description}
-              btnText={t.main.description.btnText}
-              btnLink="/about"
+              btns={t.main.description.btns}
             />
           </LayoutDescription>
-          <LayoutContent>
+
+          <LayoutContent noMobilePadding>
             <Markup />
           </LayoutContent>
         </LayoutWrapper>

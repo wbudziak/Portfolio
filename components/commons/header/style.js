@@ -11,7 +11,6 @@ export const Header = styled.div`
   min-width: 80px;
   height: 100%;
   z-index: 10;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
   @media ${below.lg} {
     width: 100%;
     height: auto;
@@ -98,6 +97,13 @@ export const Language = styled.span`
   }
 `;
 
+export const LanguageMobile = styled(Language)`
+  display: none;
+  @media ${below.lg} {
+    display: block;
+  }
+`;
+
 export const Nav = styled.ul`
   position: fixed;
   top: 0%;
@@ -111,7 +117,8 @@ export const Nav = styled.ul`
   background-color: ${colors.dark};
   z-index: -1;
   border-left: 1px solid ${colors.gray};
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.4);
+
   overflow: hidden;
   transform: translateX(-100%);
 

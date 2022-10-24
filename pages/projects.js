@@ -28,8 +28,7 @@ export default function Projects() {
             <Description
               heading={t.projects.description.heading}
               description={t.projects.description.description}
-              btnText={t.projects.description.btnText}
-              btnLink="/contact"
+              btns={t.projects.description.btns}
             />
           </LayoutDescription>
           <LayoutContent>

@@ -7,13 +7,14 @@ const Markup = (props) => {
       <S.Wrapper>
         <S.Markup
           as={motion.span}
-          initial={{ y: 10, opacity: 0 }}
+          initial={{ y: -15, opacity: 0 }}
           animate={{
             y: 0,
-            opacity: 0.1,
+            opacity: 1,
           }}
           transition={{
-            duration: 0.6,
+            duration: 0.3,
+            delay: 0.3,
             type: "linear",
           }}
         >
